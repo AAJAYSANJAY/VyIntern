@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Prompting user input for grid size
+        System.out.print("Enter the value of n: ");
+        int n = scanner.nextInt();
+        
+        // Input validation: grid size must be positive
+        if (n <= 0) {
+            System.out.println("Grid size must be a positive integer.");
+        } else {
+            // Calculating the total number of squares using the formula
+            int totalSquares = (n * (n + 1) * (2 * n + 1)) / 6;
+            
+            // Displaying the result
+            System.out.println("Total number of squares in a " + n + "x" + n + " grid is: " + totalSquares);
+        }
+        
+        // Closing the scanner
+        scanner.close();
+    }
+}
