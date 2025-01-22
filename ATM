@@ -1,0 +1,105 @@
+import java.util.Scanner;
+
+class Main {
+    int bal;  
+    int dep_amt;
+    int amount;
+    int tran_amt;
+    String tmeth;
+    String acc_no;
+
+   
+    public void balance() {
+        System.out.println("Balance amount = " + bal);
+    }
+
+    
+    public void withdrawal(int amount) {
+        if (amount <= bal) {
+            System.out.println("Amount is withdrawn");
+            bal = bal - amount;
+            System.out.println("Balance = " + bal);
+        } else {
+            System.out.println("Insufficient balance");
+        }
+    }
+
+    public void deposit(int dep_amt){
+        if(amount<=0)
+        {
+        bal=bal+dep_amt;
+        System.out.println("Amount Deposited");
+        System.out.println("BAlance after deposit:"+bal);
+    }
+}
+    public void transfer(String acc_no,String tmeth, int tran_amt){
+    
+
+        if(tmeth.equals("yes"))
+        {
+            if(tran_amt<=bal)
+            {
+                System.out.println("Money"+tran_amt+"Transfered To Account_ No"+acc_no);
+                bal=bal-tran_amt;
+                System.out.println("Balance after transfer"+bal);
+            }
+        }
+        else if(tmeth.equals("no")){
+            if(tran_amt>0)
+            {
+                System.out.println("Money"+tran_amt+"transfered to Account_no"+acc_no);
+            }
+        }
+        else {
+            System.out.println("Invalid input for transfer decision.");
+        }
+    }    
+
+   
+public static void main(String[] args) {
+        Main account = new Main();
+        Scanner a = new Scanner(System.in);
+        account.bal = 10000;
+        System.out.println("WELCOME TO ATM");
+        System.out.println("Enter your choice(1.Check Balance,2.Deposit,3.Withdrawal,4.Transfer):");
+        int option= a.nextInt();
+        switch(option){
+            case 1:
+            {
+             System.out.println("Balance in your account"+account.bal);
+             break;
+            }
+
+            case 2:
+            {
+                System.out.println("Enter Amount to deposit:");
+                int dep_amt=a.nextInt();
+                account.deposit(dep_amt);
+                break;
+            }
+
+            case 3:
+            {
+                System.out.println("Enter the Amount to Withdrawal:");
+                int amount=a.nextInt();
+                account.withdrawal(amount);
+                break;
+            }
+
+            case 4:
+            {
+                System.out.println("Enter account_no:");
+                String acc_no=a.next();
+                System.out.println("DO YOU WANT TO TRANSFER AMOUNT FROM YOUR ACCOUNT:(yes/no)");
+                String tmeth=a.next();
+                System.out.println("Enter the Amount to Transfer:");
+                int tran_amt=a.nextInt();
+                account.transfer(acc_no,tmeth,tran_amt);
+                break;
+
+            }
+        }
+}
+}
+
+        
