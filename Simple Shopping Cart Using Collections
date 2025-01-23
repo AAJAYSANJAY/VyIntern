@@ -1,0 +1,93 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Scanner;
+
+class Main {
+    
+    private ArrayList<String> list = new ArrayList<>();
+
+    
+    public void product() {
+        Map<String, Integer> pro = new HashMap<>();
+        pro.put("Sugar 1kg", 35);
+        pro.put("Rice 1kg", 45);
+        pro.put("Candle 1pc", 10);
+
+        for (Map.Entry<String, Integer> entry : pro.entrySet()) {
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            System.out.println(key + ": " + value);
+        }
+    }
+
+    
+    public void basket(String b) {
+        list.add(b); 
+        System.out.println("Product added to cart: " + b);
+    }
+
+    
+    public void showCart() {
+        if (list.isEmpty()) {
+            System.out.println("The cart is empty.");
+        } else {
+            System.out.println("Products in the cart:");
+            Iterator<String> itr = list.iterator();
+            while (itr.hasNext()) {
+                System.out.println(itr.next());
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Main cart = new Main();
+        Scanner sc = new Scanner(System.in);
+
+        while (true) { 
+            System.out.println("\nSelect an option:");
+            System.out.println("1. Show Products");
+            System.out.println("2. Add Product to Cart");
+            System.out.println("3. Show Cart");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+
+            int select = sc.nextInt();
+            switch (select) {
+                case 1: {
+                    System.out.println("\nProducts:");
+                    cart.product();
+                    break;
+                }
+
+                case 2: {
+                    System.out.println("Enter the number of products to add to the cart:");
+                    int t = sc.nextInt();
+                    for (int i = 0; i < t; i++) { 
+                        System.out.println("Enter the product name:");
+                        String b = sc.next();
+                        cart.basket(b);
+                    }
+                    break;
+                }
+
+                case 3: {
+                    System.out.println("\nShowing Cart:");
+                    cart.showCart();
+                    break;
+                }
+
+                case 4: {
+                    System.out.println("Exiting the program. Thank you!");
+                    sc.close();
+                    System.exit(0);
+                }
+
+                default: {
+                    System.out.println("Invalid choice. Please try again.");
+                }
+            }
+        }
+    }
+}
