@@ -1,0 +1,32 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class SPS {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        String[] choice = {"Stone", "Paper", "Scissors"};
+
+        System.out.println("Enter your choice Stone, Paper, Scissors:");
+        String b = scanner.nextLine();
+
+        int computer = random.nextInt(3); 
+        String computerChoice = choice[computer];
+        System.out.println("Computer's choice: " + computerChoice);
+
+        if (b.equalsIgnoreCase(computerChoice)) {
+            System.out.println("It's a tie");
+            
+        } else if ((b.equals("Stone") && computerChoice.equals("Scissors")) ||
+                   (b.equals("Paper") && computerChoice.equals("Stone")) ||
+                   (b.equals("Scissors") && computerChoice.equals("Paper"))) {
+            System.out.println("You win");
+           
+        } else {
+            System.out.println("You lose");
+           
+        }
+    }
+    
+}
