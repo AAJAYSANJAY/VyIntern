@@ -48,7 +48,7 @@ class test1 {
             
 
             System.out.println("Computer's choice: " + computerChoice);
-
+            
             if (userChoice.equalsIgnoreCase(computerChoice)) {
                 b="Its is a tie";
             } else if ((userChoice.equalsIgnoreCase("Stone") && computerChoice.equals("Scissors")) ||
@@ -61,6 +61,7 @@ class test1 {
                 b="You lose! Try again.";
             }
         }
+    
 
         scanner.close();
 
@@ -77,10 +78,11 @@ class test1 {
             for (Map.Entry<String, Integer> entry : scoreMap.entrySet()) {
                 writer.write("Player: " + entry.getKey() + ", Attempts: " + entry.getValue() + "\n");
             }
-
+            
             for (Map.Entry<String, Integer> entry : a.entrySet()) {
                 writer.write("Status: " + entry.getKey() + ", Attempts: " + entry.getValue() + "\n");
             }
+        
 
 
             
