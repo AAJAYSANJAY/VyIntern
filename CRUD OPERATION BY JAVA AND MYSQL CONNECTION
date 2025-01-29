@@ -1,0 +1,182 @@
+import java.sql.*;
+import java.util.Scanner;
+
+class Create {
+    private Connection a;
+
+    public Create(Connection a) {
+        this.a = a;
+    }
+
+    public void add(String name, String mail, String pass, int id) {
+        String s1 = "INSERT INTO testing (PID, PNAME, PEMAIL, `PASSWORD`) VALUES (?, ?, ?, ?)";
+        try (PreparedStatement b = a.prepareStatement(s1)) {
+            b.setInt(1, id);
+            b.setString(2, name);
+            b.setString(3, mail);
+            b.setString(4, pass);
+            b.executeUpdate();
+            System.out.println("Person Data successfully inserted!");
+        } catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("Error: Duplicate entry or integrity constraint violation.");
+            e.printStackTrace();
+        } catch (SQLException e) {
+            System.out.println("Database error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+    public void show() {
+        String s2 = "SELECT PID, PNAME, PEMAIL, `PASSWORD` FROM testing";
+        try (PreparedStatement d = a.prepareStatement(s2);
+             ResultSet result = d.executeQuery()) {
+
+            while (result.next()) {
+                int c1 = result.getInt("PID");
+                String c2 = result.getString("PNAME");
+                String c3 = result.getString("PEMAIL");
+                String c4 = result.getString("PASSWORD");
+
+                System.out.println("PID: " + c1);
+                System.out.println("NAME: " + c2);
+                System.out.println("MAIL: " + c3);
+                System.out.println("PASSWORD: " + c4);
+            }
+        } catch (SQLException e) {
+            System.out.println("Database error occurred while fetching data.");
+            e.printStackTrace();
+        }
+    }
+
+    public void delete(int del) {
+        String s3 = "DELETE FROM testing WHERE PID = ?";  // Fixed table name
+        try (PreparedStatement f = a.prepareStatement(s3)) {
+            f.setInt(1, del);
+            
+            
+                System.out.println("Record deleted.");
+            
+        } catch (SQLException e) {
+            System.out.println("Error deleting the record.");
+            e.printStackTrace();
+        }
+    }
+    
+
+public void update1(int pid, String namec, String passc, String mailc, String Change) {
+    PreparedStatement statement;
+    try {
+        
+        if (Change.equals("Name")) {
+            String s4 = "UPDATE testing SET PNAME = ? WHERE PID = ?";
+            statement = a.prepareStatement(s4);
+            statement.setInt(1,pid);
+            statement.setString(1, namec);
+        }else if (Change.equals("Email")) {
+            String s5 = "UPDATE testing SET PEMAIL = ? WHERE PID = ?";
+            statement = a.prepareStatement(s5);
+            statement.setInt(1,pid);
+            statement.setString(1, mailc);
+        }else if(Change.equals("Password")){
+            String s6 = "UPDATE testing SET PASSWORD = ? WHERE PID = ?";
+            statement = a.prepareStatement(s6);
+            statement.setInt(1, pid);
+            statement.setString(1,passc);
+        } 
+        else {
+            System.out.println("Invalid update type.");
+            return;
+        }  
+    }catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
+
+
+    public static void main(String[] args) {
+        Scanner c = new Scanner(System.in);
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection a = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/test", "root", "12345678"
+            );
+
+            Create t = new Create(a);
+
+            System.out.println("Enter choice (1 for Add, 2 for Show, 3 for Delete,4 for Update): ");
+            int choice = c.nextInt();
+            c.nextLine();  // Clear buffer
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter your ID: ");
+                    int id = c.nextInt();
+                    c.nextLine();
+
+                    System.out.print("Enter your name: ");
+                    String name = c.nextLine();
+
+                    System.out.print("Enter your email: ");
+                    String mail = c.nextLine();
+
+                    System.out.print("Enter your password: ");
+                    String pass = c.nextLine();
+
+                    t.add(name, mail, pass, id);
+                    break;
+
+                case 2:
+                    t.show();
+                    break;
+
+                case 3:
+                    System.out.print("Enter the ID you want to delete: ");
+                    int del = c.nextInt();
+                    c.nextLine();  // Clear buffer
+                    t.delete(del);
+                    break;
+                
+                case 4:
+                    System.out.println("Enter the Content which you want to Update(1.Name,2.Email,3.Password):");
+                    String Change = c.nextLine();
+                    
+                    String namec = "", mailc = "", passc = "",pid ="";
+                    
+                    if (Change.equalsIgnoreCase("Name")) {
+                        System.out.println("Enter PID:");
+                        pid = c.next();
+                        System.out.print("Enter new Name: ");
+
+                        namec = c.nextLine();
+                    } else if (Change.equalsIgnoreCase("Email")) {
+                        System.out.println("Enter PID:");
+                        pid = c.next();
+                        System.out.print("Enter new Email: ");
+                        mailc = c.nextLine();
+                    } else if (Change.equalsIgnoreCase("Password")) {
+                        System.out.println("Enter PID:");
+                        pid = c.next();
+                        System.out.print("Enter new Password: ");
+                        passc = c.nextLine();
+                    }
+                    t.update1(Integer.parseInt(pid), namec, passc, mailc, Change);
+
+                    break;
+
+                default:
+                    System.out.println("Invalid choice.");
+            }
+
+            a.close();
+        } catch (ClassNotFoundException e) {
+            System.out.println("JDBC Driver not found.");
+            e.printStackTrace();
+        } catch (SQLException e) {
+            System.out.println("Database error occurred.");
+            e.printStackTrace();
+        } finally {
+            c.close();
+        }
+    }
+}
