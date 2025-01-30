@@ -1,10 +1,10 @@
 import java.sql.*;
 import java.util.Scanner;
 
-class Create {
+class create {
     private Connection a;
 
-    public Create(Connection a) {
+    public create(Connection a) {
         this.a = a;
     }
 
@@ -70,18 +70,28 @@ public void update1(int pid, String namec, String passc, String mailc, String Ch
         if (Change.equals("Name")) {
             String s4 = "UPDATE testing SET PNAME = ? WHERE PID = ?";
             statement = a.prepareStatement(s4);
-            statement.setInt(1,pid);
             statement.setString(1, namec);
+            statement.setInt(2,pid);
+            statement.executeUpdate();
+            System.out.println("Name Updated!!!!");
+
+            
         }else if (Change.equals("Email")) {
             String s5 = "UPDATE testing SET PEMAIL = ? WHERE PID = ?";
             statement = a.prepareStatement(s5);
-            statement.setInt(1,pid);
             statement.setString(1, mailc);
+            statement.setInt(2,pid);
+            statement.executeUpdate();
+            System.out.println("Email Updated!!!!");
+            
         }else if(Change.equals("Password")){
             String s6 = "UPDATE testing SET PASSWORD = ? WHERE PID = ?";
             statement = a.prepareStatement(s6);
-            statement.setInt(1, pid);
             statement.setString(1,passc);
+            statement.setInt(2, pid);
+            statement.executeUpdate();
+            System.out.println("Password Updated!!!!");
+            
         } 
         else {
             System.out.println("Invalid update type.");
@@ -102,7 +112,7 @@ public void update1(int pid, String namec, String passc, String mailc, String Ch
                 "jdbc:mysql://localhost:3306/test", "root", "12345678"
             );
 
-            Create t = new Create(a);
+            create t = new create(a);
 
             System.out.println("Enter choice (1 for Add, 2 for Show, 3 for Delete,4 for Update): ");
             int choice = c.nextInt();
@@ -145,18 +155,18 @@ public void update1(int pid, String namec, String passc, String mailc, String Ch
                     
                     if (Change.equalsIgnoreCase("Name")) {
                         System.out.println("Enter PID:");
-                        pid = c.next();
+                        pid = c.nextLine();
                         System.out.print("Enter new Name: ");
 
                         namec = c.nextLine();
                     } else if (Change.equalsIgnoreCase("Email")) {
                         System.out.println("Enter PID:");
-                        pid = c.next();
+                        pid = c.nextLine();
                         System.out.print("Enter new Email: ");
                         mailc = c.nextLine();
                     } else if (Change.equalsIgnoreCase("Password")) {
                         System.out.println("Enter PID:");
-                        pid = c.next();
+                        pid = c.nextLine();
                         System.out.print("Enter new Password: ");
                         passc = c.nextLine();
                     }
