@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body style="background-color: rgb(36, 255, 226);">
+    <hr>
+    
+    <em> <b> PORTFOLIO</b></em>
+    
+    
+   
+    <table align="right">
+        <tr>
+            <td> <a href="#home" > <em>| HOME | </em></a></td>
+            <td> <a href="#about" > <em> ABOUT | </em></a></td>
+            <td> <a href="#contact"> <em> CONTACT | </em></a></td>
+        </tr>
+    </table>
+    <hr>
+    <br>
+    <marquee direction="right" style="color:rgb(238, 238, 238)"><b>WELCOME!!!</b></marquee>
+    <br>
+    <section id="home" class="1">
+    <div class="1">
+        <br>
+        <br>
+        <img src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\-Insert_image_here-.svg.png" >
+        <br>
+        <h1 align="center" style="color:#f5e0e0">I'm <em><mark title="Name">A.Ajay Sanjay,</mark></em></h1>
+        <h1 align="center" style="color:#f5e0e0">A <cite>Web Developer And Cloud Engineer</cite> Who Loves Crafting <ins>Elegant And Scalable Digital Solutions</ins>.<br> Whether It's Sleek UI Designs Or Optimizing Cloud Infrastructure,<br> I Bring Ideas To Life On The Web!</h2>
+    </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+
+
+    <section id="about" class="2">
+        <div class="2">
+
+            <h1 align="center" style="color:#f5e0e0"><em><b style="color: rgb(204, 2, 2);">Educations:-</b><br>Sri Venkateswara College Of Engineering,Sriperumbudur<br>B.E Computer Science And Engineering<br>Cumulative GPA:7.2<br>Member Of E-Cell</em></h1>
+            <h1 align="center" style="color:#f5e0e0"><em>The Schram Academy,Chennai<br>Maintained CGPA:7.5 in SSLC<br>Maintained CGPA:7.6 in HSC</em></h1>
+            
+            <h1 align="center" style="color:#f5e0e0"><em><b style="color: rgb(204, 2, 2);">Technical Skills:-</b><br> Web Development, Cloud Engineering-MS Azure.<br>
+                <b>Languages Known:</b> <br>Java, Python, HTML, CSS, JavaScript.</em></h1>
+
+            <h1 align="center" style="color:#f5e0e0"><em><b style="color: rgb(204, 2, 2);">Certifications:-</b><br> Full Stack Development Certificate, MS-Azure AZ-900 Cloud Fundamentals Certificate,<br> MS Azure AZ-104 Cloud Administrator Associate Certificate</em></h1>
+            <h1 align="center" style="color:#f5e0e0"><em><b style="color: rgb(204, 2, 2);">Hobbies:-</b><br> I find joy in <mark>photography</mark>, using my lens to capture the beauty of landscapes and everyday moments,<br> <mark>Cooking</mark> is both a creative outlet and a way to unwind; I love trying out new recipes and flavors from different cultures,<br>A passionate <mark>movie enthusiast</mark>, I enjoy exploring a wide range of films, from sci-fi and psychological thrillers to documentaries that offer new perspectives.</em></h1>
+            </div>
+    </section>
+            
+            <br>
+            <br>
+            <hr>
+            <br>
+
+    <section id="contact" class="3">
+        <div class="3" align="center">
+            <h1 style="color:rgb(204, 2, 2);"><em>Phone Number:</em><b style="color:#f5e0e0;" >9952013646</b></h1>
+        
+            <a href="https://github.com/AAJAYSANJAY">
+            <img src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\git.png" title="GITHUB" width="50"height="50"></a>
+
+            <a href="https://www.linkedin.com/in/a-ajay-sanjay-326526257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+            <img src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\linked.png" title="Linkdin" width="50"height="50"></a>
+             
+            <a href="mailto:2022cs0385@svce.ac.in">
+                <img src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\gmail.png" title="Gmail" width="50"height="50"></a>
+        
+        </div>
+    </section>
+
+            
+
+</body>
+
+
+</html>
