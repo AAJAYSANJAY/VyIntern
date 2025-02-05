@@ -1,0 +1,33 @@
+body{
+    background-image:url(bg1.avif);
+    background-repeat:no-repeat ;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+
+
+.img1{
+    
+   padding-left: 900px;
+   
+}
+
+.text1{
+    text-shadow: 10%;
+    text-align:left;
+    padding-bottom: 100px;
+    
+}
+
+.head{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    
+    
+    
+}
+
+
