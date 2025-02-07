@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Portfolio</title>
+    <link rel="icon" href="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\resume.png">
+</head>
+<body>
+    
+    <div class="head">
+       
+   
+
+   <ul>
+    <li><a href="#contact" title="Contact">Contact</a></li>
+    <li><a href="#about" title="About">About</a></li>
+    <li><a href="#home" title="Home">Home</a></li>
+    <li><b href="#home" title="Portfolio">PORTFOLIO</b></li>
+  </ul>
+  <img class="cloud5" src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\cloud.gif">
+    
+    
+  
+    
+    
+    </div>
+
+   
+    <br>
+    <section id="home" class="box1">
+    <div class="box1">
+        <br>
+        <br>
+        <img class="cloud6" src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\cloud.gif">
+        <img class="cloud7" src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\cloud.gif">
+        <img class="cloud8" src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\cloud.gif">
+
+
+        <img class="img1" src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\-Insert_image_here-.svg.png" >
+        <br>
+        <div class="info">
+        <h1 class="text1" align="center" style="color:#f5e0e0">I'm <em><mark title="Name">A.Ajay Sanjay,</mark></em>
+        A <cite>Web Developer And Cloud Engineer</cite><br> Who Loves Crafting <ins>Elegant And Scalable Digital Solutions</ins>.<br> Whether It's Sleek UI Designs Or Optimizing Cloud Infrastructure,<br> I Bring Ideas To Life On The Web!</h2>
+    </div>
+    </div>
+    </section>
+    <br>
+    <br>
+    <br>
+
+
+    <section id="about" class="2">
+        <div class="2">
+             <div class="edu">
+            <h1 align="center" style="color:#f5e0e0"><em><b style="color: rgb(204, 2, 2);"><ins>Educations:-</ins></b></em></h1>
+            <div class="edu1">
+            <h1 align="center" style="color:#080606"><em></em><br>Sri Venkateswara College Of Engineering,Sriperumbudur<br>B.E Computer Science And Engineering<br>Cumulative GPA:7.2<br>Member Of E-Cell<br>
+             
+           The Schram Academy,Chennai<br>Maintained CGPA:7.5 in SSLC<br>Maintained CGPA:7.6 in HSC</em></h1>
+             </div>
+             </div>
+             <div class="gif1">
+                <img src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\gif2.gif">
+                <img class="cloud1" src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\cloud.gif">
+
+                </div>
+             <div class="tech">
+            <h1 align="center" style="color:#f5e0e0"><em><b style="color: rgb(204, 2, 2);"><ins>Technical Skills:-</ins></b></em></h1>
+            <div class="tech1">
+            <h1 align="center" style="color:#0a0303"><em><br> Web Development,<br> Cloud Engineering-MS Azure.<br>
+                <b>Languages Known:</b> <br>Java, Python, HTML, CSS, JavaScript.</em></h1>
+             </div>
+             </div>
+             <div class="gif2">
+                <img src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\gif2.gif">
+                <img class="cloud2" src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\cloud.gif">
+
+                </div>
+
+            <div class="cert">
+            <h1 align="center" style="color:#f5e0e0"><em><b style="color: rgb(204, 2, 2);"><ins>Certifications:-</ins></b></em></h1>
+            <div class="cert1">
+            <h1><em><br> Full Stack Development Certificate,<br> MS-Azure AZ-900 Cloud Fundamentals Certificate,<br> MS Azure AZ-104 Cloud Administrator Associate Certificate</em></h1>
+            </div>
+            </div>
+            <div class="gif3">
+                <img src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\gif2.gif">
+                <img class="cloud3" src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\cloud.gif">
+
+                </div>
+            <div class="hob">
+            <h1 align="center" style="color:#f5e0e0"><em><b style="color: rgb(204, 2, 2);"><ins>Hobbies:-</ins></b></em></h1>
+            <div class="hob1">
+            <h1 align="center"><em><br> I find joy in <mark>photography</mark>, using my lens to capture the beauty of landscapes and everyday moments,<br> <mark>Cooking</mark> is both a creative outlet and a way to unwind; I love trying out new recipes and flavors from different cultures,<br>A passionate <mark>movie enthusiast</mark>, I enjoy exploring a wide range of films, from sci-fi and psychological thrillers to documentaries that offer new perspectives.</em></h1>
+            </div>
+            </div>
+            <div class="gif4">
+                <img src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\gif2.gif">
+                <img class="cloud4" src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\cloud.gif">
+
+                </div>
+        </div>
+    </section>
+            
+            <br>
+            
+   <br>    
+   <br>
+   <br>
+
+
+    <section id="contact" class="con">
+        <div class="con" align="center">
+            <h1 style="color:rgb(204, 2, 2);"><em><ins>Phone Number:-</ins></em></h1>
+            <div class="mob1">
+            <h1><b style="color:#0c0b0b;" >9952013646</b></h1>
+            </div>
+            <br>
+            <div class="bc">
+            <a href="https://github.com/AAJAYSANJAY">
+            <img src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\git.png" title="GITHUB" width="50"height="50"></a>
+
+            <a href="https://www.linkedin.com/in/a-ajay-sanjay-326526257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+            <img src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\linked.png" title="Linkdin" width="50"height="50"></a>
+             
+            <a href="mailto:2022cs0385@svce.ac.in">
+                <img src="C:\Users\A.AJAY\Desktop\Vy Intern\HTML\gmail.png" title="Gmail" width="50"height="50"></a>
+        
+        </div>
+        </div>
+    </section>
+
+            
+
+</body>
+
+
+</html>
